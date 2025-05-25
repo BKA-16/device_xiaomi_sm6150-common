@@ -146,8 +146,9 @@ on boot
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
 
     # Set thermal mode to evaluation
+    # Thermal message sconfig - main thermal control file
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
 
     # Set xiaomi touch permissions
     chown system system /dev/xiaomi-touch
